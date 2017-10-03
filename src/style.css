@@ -1,0 +1,52 @@
+@import "flex.css";
+@import "color.css";
+@import "fonts.css";
+@import "links.css";
+@import "responsive.css";
+@import "text.css";
+@import "reset.css";
+
+
+body{
+    background: #eee;
+}
+
+.frm{
+    border: solid gray 1px;
+    width: 40%;
+    border-radius: 5px;
+    background: white;
+    padding: 50px;
+}
+
+.sub-btn{
+    color: #fff;
+    background: #337ab7;
+    padding: 5px;
+}
+
+.border{
+    border: 100px solid black;
+}
+
+.categories{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin: 10px 0px;
+}
+
+.category{
+}
+
+.item{
+    margin: 10px 0px;
+}
+
+.new-user{
+	color: black;
+}
+.img{
+	height:20vh;
+	width: 20vw;
+}
