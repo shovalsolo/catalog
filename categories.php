@@ -68,7 +68,9 @@
                     <form method="POST" action="category.php">
 
                         <div class="category flex flex-center flex-dir-col border-all-sml bor-radius-sml margin-up-down-ex-lar pad-sml">
-                            <button class="margin-all-sml" type="submit" name="cname" value="<?php echo $row['id']?>"><?php echo $row['cname']; ?></button>
+                            <div class="margin-all-ex-lar">
+                                <button  type="submit" name="cname" value="<?php echo $row['id']?>"><?php echo $row['cname']; ?></button>
+                            </div>
                             <div>
                                 <?php echo "<img class='img' src='data:image/jpeg;base64," .base64_encode($row['image'])."'>"; ?>
                             </div>    
