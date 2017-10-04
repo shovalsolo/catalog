@@ -7,7 +7,10 @@
     <link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
     <body>
-        <div class="border-all ">
+    <header class="header">
+
+    </header>
+        <div class="flex flex-center flex-dir-col margin-all-ex-lar">
             <?php 
 
             $nusername = $_POST["nusername"];
@@ -30,6 +33,7 @@
 
             //insert in to first null parameter is an id and automatic second is fruit name
 
+
             $result = mysqli_query($connection,$query);
             if ($result){
                 echo "<h2>New user was created</h2><br/>";
@@ -41,6 +45,9 @@
             <p>
                 <a href="index.php" class="new-user">Back to login page</a>
             </p> 
-        </div>     
+        </div>
+        <footer class="footer">
+        <p class="flex flex-center">Copyright &copy; Solotech 2017</p>
+        </footer>      
     </body>
 </html>

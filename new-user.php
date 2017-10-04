@@ -7,16 +7,24 @@
     <link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
     <body>
-        <div class="border-all ">
+    <header class="header">
+        <h1>Create new user</h1>
+    </header>
+        <div class="flex flex-center pad-sml">
 
-            <form action="add-user.php" method="post">
+            <form action="add-user.php" method="post" class="pad-ex-sml margin-all-sml">
         
-                User-name: <input type="text" name="nusername"><br/>
-                Password: <input type="password" name="npassword"><br/>
+                Username: <input type="text" name="nusername" class="pad-ex-sml margin-all-lar"><br/>
+                Password : <input type="password" name="npassword" class="pad-ex-sml margin-all-lar"><br/>
 
                 <br/>
-                <input type="submit">
+                <div class="flex flex-center">
+                    <input type="submit">
+                </div>
             </form>
-        </div>     
+        </div>
+        <footer class="footer">
+        <p class="flex flex-center">Copyright &copy; Solotech 2017</p>
+        </footer>      
     </body>
 </html>

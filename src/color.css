@@ -47,6 +47,9 @@ $color-blue: #0000FF;
 .bgc-metal-gray{
 background-color: #E5E4E2;
 }
+.bgc-blue{
+background: #337ab7;
+}
 /*-----------------color---------------------*/
 .wcolor{
 	color: white;

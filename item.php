@@ -7,15 +7,18 @@
     <link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
     <body>
-        <div class="border-all">
+    <header class="header flex flex-jus-spa-aro">
+        <h1>Item details</h1>
+        <div class="flex flex-dir-col">
+            <h5 class="pad-ex-sml"><a href="new-item.php">Create new item</a></h5>
+            <h5 class="pad-ex-sml"><a href="index.php">Logout</a></h5>
+        </div>
+    </header>
+        <div>
 
             <?php 
-
-            echo "this is item.php page";
             echo "<br><br>";
             $item = $_POST['item'];
-
-            echo "All Item information";
 
             $dbervername = "localhost"; //server name
             $dbUsername = "root"; // user name to login to db
@@ -40,11 +43,14 @@
                                 <span> : $<?php echo $row['price']; ?></span>
                                 </strong>
                             </div>    
-                            <div>
+                            <div class="margin-all-ex-lar">
                                 <?php echo "<img class='item-img' src='data:image/jpeg;base64," .base64_encode($row['image'])."'>"; ?>
                             </div>
                     </div>
             <?php } ?>
         </div>
+        <footer class="footer">
+        <p class="flex flex-center">Copyright &copy; Solotech 2017</p>
+        </footer> 
     </body>
 </html>

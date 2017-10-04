@@ -7,9 +7,12 @@
     <link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
     <body>
-        <div class="border-all ">
+    <header class="header">
+    <h3>PRODUCT CATALOG</h3>
+    </header>
+        <div>
             <div class="flex flex-center pad-up-down-lar ">
-            <h1>Product Catalog</h1>
+            <h1>Login to catalog</h1>
             </div>
                 <div class="flex flex-center">
                     <div class="frm margin-bot-big">
@@ -35,6 +38,9 @@
                         </form>
                     </div>
                 </div>
-        </div>     
+        </div>
+        <footer class="footer">
+        <p class="flex flex-center">Copyright &copy; Solotech 2017</p>
+        </footer>     
     </body>
 </html>

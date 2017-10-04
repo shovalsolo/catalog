@@ -43,6 +43,10 @@
 }  
 /*all----*/
 
+.pad-ex-sml{
+	padding: 0.5em;
+}
+
 .pad-sml{
 	padding: 1em;
 }
@@ -196,7 +200,7 @@ min-height: 300px;
 	margin: 10px;
 }
 
-/*-------up-down--------*/
+/*------margin-up-down--------*/
 
 .margin-up-down{
 	margin: 5px 0px;
@@ -208,6 +212,10 @@ min-height: 300px;
 
 .margin-up-down-lar{
 	margin: 20px 0px;
+}
+
+.margin-up-down-ex-lar{
+	margin: 50px 0px;
 }
 
 /*-------margin-bottom--------*/

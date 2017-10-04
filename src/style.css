@@ -11,6 +11,16 @@ body{
     background: #eee;
 }
 
+.header{
+    background-color: #337ab7;
+    padding: 1rem 2rem 1rem 0rem; 
+}
+
+.footer{
+    background-color: #337ab7;
+    padding: 2rem 0rem 2rem 0rem; 
+}
+
 .frm{
     border: solid gray 1px;
     width: 40%;

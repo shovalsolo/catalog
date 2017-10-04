@@ -1,6 +1,6 @@
 <?php
 echo "new-item.php";
-echo "adding a new item"
+echo "<br/><br/>";
 
 ?>
 
@@ -13,25 +13,43 @@ echo "adding a new item"
     <link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
     <body>
-        <div class="border-all"> 
-
-            <form method="POST" action="">
-                <p>
+    <header class="header">
+         <h1>Add a new item </h1>
+    </header>
+        <div class="flex flex-center"> 
+        
+            <form enctype="multipart/form-data" method="POST" action="add-item.php">
+                <p class="margin-all-ex-lar">
                     <label for="">New item name: </label>
-                    <input type="text" name="itemName" >
+                    <input type="text" name="itemname" >
                 </p>
-                <p>
+                <p class="margin-all-ex-lar">
                     <label for="">New item price: </label>
-                    <input type="number" name="itemPrice" min="0.01" step="0.01" max="2500"/>
+                    <input type="number" name="itemprice" min="0.01" step="0.01" max="2500"/>
                 </p>
-                <p>
+                <p class="margin-all-ex-lar">
                     <label for="">Item image: </label>
-                    <input type="text" name="itemName" >
+                    <input type="file" name="myfile" >
+                    <select name="categories">
+                        <option value="1">Food</option>
+                        <option value="2">Drink</option>
+                        <option value="3">Shoes</option>
+                    </select>
                 </p>
-                <p>
-                    <input type="submit" class="add-item" value="Add item">
+                <!-- <p class="margin-all-ex-lar">
+                    <select name="categories">
+                        <option value="1">Food</option>
+                        <option value="2">Drink</option>
+                        <option value="3">Shoes</option>
+                    </select>
+                </p> -->
+                <p class="flex flex-center margin-all-ex-lar">
+                    <input type="submit" value="Add item">
                 </p>
             </form>
-        </div>    
+        </div>
+        <footer class="footer">
+        <p class="flex flex-center">Copyright &copy; Solotech 2017</p>
+        </footer>     
     </body>
 </html>

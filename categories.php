@@ -7,10 +7,16 @@
     <link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
     <body>
-        <div class="border-all">
-
-        <h1>You are in categories.php</h1>
-        <p>In this page we need to bring all the categores</p>
+    <header class="header flex flex-jus-spa-aro">
+        <h1>All Categories</h1>
+        <div class="flex flex-dir-col">
+            <h5 class="pad-ex-sml"><a href="new-item.php">Create new item</a></h5>
+            <h5 class="pad-ex-sml"><a href="index.php">Logout</a></h5>
+        </div>
+    </header>
+        <div >
+        <div class="flex flex-jus-spa-bet">
+            <!-- <h1 class="margin-all-ex-lar">All Categories</h1> -->
         <?php
 
         //Get values taht was passed from the form in the index.php login 
@@ -37,8 +43,15 @@
         $result = mysqli_query($connection,$query);
         $row = mysqli_fetch_assoc($result);
 
-        if ($row['username'] == $username && $row['password'] == $password ){
-            echo "login success !!! welcome ".$row['username'];
+        if ($row['username'] == $username && $row['password'] == $password ){ ?>
+            <p class="margin-all-ex-lar">
+               <?php echo "login success welcome : ".$row['username']; ?>
+            </p>
+        </div>
+        <div class="flex flex-center">
+            <h3>Select a catagory</h3>
+        </div>
+            <?php
             $connection = mysqli_connect($dbervername,$dbUsername,$dbPassword,$dbName) ; //a connection to db func ('env/ip','user','pass' ,'db name')
             
             if (!$connection){ // if not able to connect to server user/pass/host is not correct gives message
@@ -54,8 +67,8 @@
                     
                     <form method="POST" action="category.php">
 
-                        <div class="category flex flex-center flex-dir-col border-all-sml bor-radius-sml">
-                            <button type="submit" name="cname" value="<?php echo $row['id']?>"><?php echo $row['cname']; ?></button>
+                        <div class="category flex flex-center flex-dir-col border-all-sml bor-radius-sml margin-up-down-ex-lar pad-sml">
+                            <button class="margin-all-sml" type="submit" name="cname" value="<?php echo $row['id']?>"><?php echo $row['cname']; ?></button>
                             <div>
                                 <?php echo "<img class='img' src='data:image/jpeg;base64," .base64_encode($row['image'])."'>"; ?>
                             </div>    
@@ -69,5 +82,8 @@
             header("Location: index.php");
         }
         ?>
+        <footer class="footer">
+        <p class="flex flex-center">Copyright &copy; Solotech 2017</p>
+        </footer>   
     </body>
 </html>
