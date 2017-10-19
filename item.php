@@ -46,6 +46,11 @@
                             <div class="margin-all-ex-lar">
                                 <?php echo "<img class='item-img' src='data:image/jpeg;base64," .base64_encode($row['image'])."'>"; ?>
                             </div>
+                            <div class="item-div flex flex-center flex-dir-col margin-all-ex-lar">
+                <form form method="POST" action="delete-item.php">
+                    <button type="submit"  name="item" value="<?php echo $row['id']?>">Delete Item</button>
+                </form>
+            </div>
                     </div>
             <?php } ?>
         </div>

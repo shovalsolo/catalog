@@ -1,5 +1,5 @@
 <?php
-echo "new-item.php";
+// echo "new-item.php";
 echo "<br/><br/>";
 
 ?>

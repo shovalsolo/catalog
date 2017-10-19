@@ -3,28 +3,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Category information</title>
+    <title>Item information</title>
     <link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
     <body>
-        <header class="header">
+    <header class="header flex flex-jus-spa-aro">
+        <h1>Item deleted</h1>
+        <div class="flex flex-dir-col">
+            <h5 class="pad-ex-sml"><a href="new-item.php">Create new item</a></h5>
+            <h5 class="pad-ex-sml"><a href="index.php">Logout</a></h5>
+        </div>
+    </header>
+        <div>
 
-        </header>
-        <div class="flex flex-center flex-dir-col">
-
-            <?php
-            // if (isset($POST['submit'])){
-
-            // }
-            
-            $itemname = $_POST["itemname"];
-            $itemprice = $_POST["itemprice"];
-            $categories = $_POST["categories"];
-            $imagename = $_FILES["myfile"]["name"];
-            $imagetmp = addslashes (file_get_contents($_FILES['myfile']['tmp_name']));
-
-            echo "<br><br><br><br>";
-            
+            <?php 
+            echo "<br><br>";
+            $item = $_POST['item'];
+            // echo $item;
 
             $dbervername = "localhost"; //server name
             $dbUsername = "root"; // user name to login to db
@@ -37,23 +32,16 @@
                 die ("could not connect to data base"); // message for wrong connection
             }
 
-            $query = "INSERT INTO item (name, price, cnumber, image, iname) VALUES ('$itemname','$itemprice','$categories','$imagetmp','$imagename')";
+            $query = "DELETE FROM item WHERE id = $item";
 
-            $result = mysqli_query($connection,$query);
-            if ($result){
-                echo "<p><h2>New item was created</h2></p><br/><br/>";
-               
-            }else {
-                echo "<h2>Item was not created</h2>";
-            }
-          
-            ?>
+            $result = mysqli_query($connection,$query); ?>
             <div class="item-div flex flex-center flex-dir-col margin-all-ex-lar">
+                <h5 class="pad-ex-sml">Item was deleted!</h5>
                 <h5 class="pad-ex-sml bgc-green"><a href="index.php">Back to Login page</a></h5>
             </div>
-        </div> 
+        </div>
         <footer class="footer">
         <p class="flex flex-center">Copyright &copy; Solotech 2017</p>
-        </footer>    
+        </footer> 
     </body>
 </html>

@@ -19,15 +19,15 @@
             <?php 
 
             echo "<br><br>";
-            $cname = $_POST['cname'];
+            $cid = $_POST['cid']; // getting the category id from categories
             
-            if ($cname==1){?>
+            if ($cid==1){?> <!--checking on which category was choosen according to the cid-->
                 <h1 class="flex flex-center margin-all-ex-lar">Food categoty</h1>
             <?php }
-            elseif($cname==2){?>
+            elseif($cid==2){?>
                 <h1 class="flex flex-center margin-all-ex-lar">Drink categoty</h1>
             <?php }
-            elseif($cname==3){?>
+            elseif($cid==3){?>
                 <h1 class="flex flex-center margin-all-ex-lar">Shoes categoty</h1>
             <?php }
             else{?>
@@ -45,7 +45,7 @@
                 die ("could not connect to data base"); // message for wrong connection
             }
 
-            $query = "SELECT * FROM item WHERE cnumber = $cname";
+            $query = "SELECT * FROM item WHERE cnumber = $cid";
 
             $result = mysqli_query($connection,$query);
 

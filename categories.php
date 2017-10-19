@@ -20,8 +20,8 @@
         <?php
 
         //Get values taht was passed from the form in the index.php login 
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+        $username = $_POST['username']; //getting username from post and inserting into parameter 
+        $password = $_POST['password']; //getting password from post and inserting into parameter 
 
 
         //connect to the server and select DB
@@ -37,20 +37,22 @@
             die ("could not connect to data base"); // message for wrong connection
         }
 
-        $query = "SELECT * FROM users WHERE username = '$username' and password = '$password'";
-        //insert in to first null parameter is an id and automatic second is fruit name
+        $query = "SELECT * FROM users WHERE username = '$username' and password = '$password'";//select query to check if the user is in the db
 
+        
         $result = mysqli_query($connection,$query);
-        $row = mysqli_fetch_assoc($result);
+        $row = mysqli_fetch_assoc($result); //Fetch a result row as an associative array
 
-        if ($row['username'] == $username && $row['password'] == $password ){ ?>
-            <p class="margin-all-ex-lar">
-               <?php echo "login success welcome : ".$row['username']; ?>
+        if ($row['username'] == $username && $row['password'] == $password ){ ?> 
+        <!-- checking in the array that the user and pass from the fields are the same as in the db -->
+            <p class="margin-all-ex-lar"> <!-- if this is correct will print the message -->
+               <?php echo "login successful welcome : ".$row['username']; ?>
             </p>
         </div>
         <div class="flex flex-center">
             <h3>Select a catagory</h3>
         </div>
+        <!-- Bringing the categoried from the db -->
             <?php
             $connection = mysqli_connect($dbervername,$dbUsername,$dbPassword,$dbName) ; //a connection to db func ('env/ip','user','pass' ,'db name')
             
@@ -58,7 +60,7 @@
                 die ("could not connect to data base"); // message for wrong connection
             }
             
-            $query = "SELECT * FROM categories";
+            $query = "SELECT * FROM categories";// getting all categories
 
             $result = mysqli_query($connection,$query); ?>
 
@@ -69,10 +71,12 @@
 
                         <div class="category flex flex-center flex-dir-col border-all-sml bor-radius-sml margin-up-down-ex-lar pad-sml">
                             <div class="margin-all-ex-lar">
-                                <button  type="submit" name="cname" value="<?php echo $row['id']?>"><?php echo $row['cname']; ?></button>
+                                <button  type="submit" name="cid" value="<?php echo $row['id']?>"><?php echo $row['cname']; ?></button>
+                                <!-- Sending in the value the id and the category name-->
                             </div>
                             <div>
                                 <?php echo "<img class='img' src='data:image/jpeg;base64," .base64_encode($row['image'])."'>"; ?>
+                                <!-- Printing an image from the DB -->
                             </div>    
                         </div>
                     </form>
@@ -82,6 +86,7 @@
         <?php
         } else{
             header("Location: index.php");
+            // if the user is not in the db returning to login page
         }
         ?>
         <footer class="footer">

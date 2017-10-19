@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-
+<!-- Index the first login page -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Login catalog</title>
-    <link rel="stylesheet" type="text/css" href="src/style.css">
+    <link rel="stylesheet" type="text/css" href="src/style.css"> <!--style css importing all css lib-->
 </head>
     <body>
     <header class="header">
@@ -16,7 +16,7 @@
             </div>
                 <div class="flex flex-center">
                     <div class="frm margin-bot-big">
-                        <form method="POST" action="categories.php">
+                        <form method="POST" action="categories.php">  <!--On submit moving to categories.php with post-->
                             <div class="box flex flex-center flex-dir-col ">
                                 <p class="pad-sml">
                                     <label for="" class="pad-up-down-lar">User-name: </label> <br/>
