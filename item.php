@@ -48,7 +48,7 @@
                             </div>
                             <div class="item-div flex flex-center flex-dir-col margin-all-ex-lar">
                 <form form method="POST" action="delete-item.php">
-                    <button type="submit"  name="item" value="<?php echo $row['id']?>">Delete Item</button>
+                    <button class="sub-btn" type="submit"  name="item" value="<?php echo $row['id']?>">Delete Item</button>
                 </form>
             </div>
                     </div>

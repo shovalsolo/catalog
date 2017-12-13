@@ -54,13 +54,12 @@
                 <form method="POST" action="item.php">
                     <div class="items margin-all-ex-lar">
                             <?php echo "<br>"; ?>
-                            <button type="submit"  name="item" value="<?php echo $row['id']?>"><?php echo $row['name']; ?></button>
+                            <button class="sub-btn" type="submit"  name="item" value="<?php echo $row['id']?>"><?php echo $row['name']; ?></button>
                             <span> : $<?php echo $row['price']; ?></span>
                     </div>
                 </form>
                
             <?php } ?>
-
 
             <hr>
             

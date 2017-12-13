@@ -69,9 +69,9 @@
                     
                     <form method="POST" action="category.php">
 
-                        <div class="category flex flex-center flex-dir-col border-all-sml bor-radius-sml margin-up-down-ex-lar pad-sml">
+                        <div class="category flex flex-center flex-dir-col   margin-up-down-ex-lar pad-sml">
                             <div class="margin-all-ex-lar">
-                                <button  type="submit" name="cid" value="<?php echo $row['id']?>"><?php echo $row['cname']; ?></button>
+                                <button class="sub-btn" type="submit" name="cid" value="<?php echo $row['id']?>"><?php echo $row['cname']; ?></button>
                                 <!-- Sending in the value the id and the category name-->
                             </div>
                             <div>
